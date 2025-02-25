@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/sections.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/china_study.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/about.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#home">ГОЛОВНА</a></li>
+                <li><a href="#about">ПРО МЕНЕ</a></li>
+                <li><a href="#study">НАВЧАННЯ</a></li>
+                <li><a href="#reviews">ВІДГУКИ</a></li>
+            </ul>
+
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="{{ url_for('static', path='images/instagram-icon.png') }}" alt="Instagram">
+                </a>
+                <a href="https://t.me" target="_blank" aria-label="Telegram">
+                    <img src="{{ url_for('static', path='images/telegram-icon.png') }}" alt="Telegram">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home">
+            <div class="banner-content">
+                <a href="#study" class="cta-button">Почати</a>
+            </div>
+        </section>
+
+        <section id="study" class="benefits">
+            <h2><span>Ви за адресою, якщо:</span></h2>
+            <div class="benefits-wrapper">
+                <ul class="benefit-list-left">
+                    <li><span class="checkmark">&#10003;</span> Бажаєте економити і не переплачувати у нас в магазинах.</li>
+                    <li><span class="checkmark">&#10003;</span> Хочете обирати з найбільшого асортименту товарів.</li>
+                </ul>
+                <ul class="benefit-list-right">
+                    <li><span class="checkmark">&#10003;</span> Цікаво стати байєром товарів з Китаю і заробляти на цьому.</li>
+                    <li><span class="checkmark">&#10003;</span> Вже маєте або плануєте відкрити власний бізнес, магазин.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="china-study">
+            <h2><span class="underline-text">Навчаю як купувати на китайських майданчиках</span></h2>
+            <div class="courses">
+                <!-- Первый курс -->
+                <div class="course-item">
+                    <div class="course-info">
+                        <div class="course-header">
+                            <div class="course-number">01</div>
+                            <h3 class="course-title">Taobao</h3>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-image-wrapper">
+                                <img src="static/images/china-market.jpg" alt="Курс 1" class="course-image">
+                            </div>
+                            <div class="course-description">
+                                <p>Детальне пояснення, як правильно вибирати продавців, знаходити найвигідніші пропозиції та замовляти без посередників.</p>
+                            </div>
+                        </div>
+                        <div class="course-price-container">
+                            <div class="course-price">
+                                <span>1149 грн</span>
+                            </div>
+                            <a href="#" class="course-btn">програма курсу</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Второй курс -->
+                <div class="course-item">
+                    <div class="course-info">
+                        <div class="course-header">
+                            <div class="course-number">02</div>
+                            <h3 class="course-title">Pinduoduo</h3>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-image-wrapper">
+                                <img src="static/images/china-market.jpg" alt="Курс 2" class="course-image">
+                            </div>
+                            <div class="course-description">
+                                <p>Як домовлятися про знижки, співпрацювати з виробниками та знаходити найкращі логістичні рішення.</p>
+                            </div>
+                        </div>
+                        <div class="course-price-container">
+                            <div class="course-price">
+                                <span>1899 грн</span>
+                            </div>
+                            <a href="#" class="course-btn">Записатись на курс</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-me">
+            <div class="container">
+                <div class="about-wrapper">
+                    <div class="about-image">
+                        <img src="{{ url_for('static', path='images/profile.jpg') }}" alt="Катя" class="profile-photo">
+                    </div>
+                    <div class="about-text">
+                        <h2>Про мене</h2>
+                        <p>За весь час через мене пройшло 6000+ учнів, і я пишаюся цим! Весь свій «китайський досвід», а також досвід учнів я помістила до навчання.</p>
+                        <p>Як і багато хто, я починала знайомитися з Китаєм через AliExpress. Тоді це просто було бажання студентки зекономити. Я не знала, чим буду займатись по життю, і думки про пошук роботи мене лякали. Але завдяки Китаю я вже 9 років займаюся бізнесом в Інстаграмі, працюю саме на себе!</p>
+                        <p>На Алі спочатку закуповувала товар. А в один момент зрозуміла, що це дорого, настав час виходити на інший рівень, адже можна ж брати ті ж товари в кілька разів дешевше! Так і дійшла до теми Taobao, Pinduoduo та інших китайських майданчиків.</p>
+                    </div>
+                </div>
+                <div class="cta-section">
+                    <h3>Плюси навчання в мене:</h3>
+                    <ul>
+                        <li>Все пояснюю з нуля, структуровано + розкладено по поличкам.</li>
+                        <li>Не треба чекати старт потоку, всі матеріали в записі.</li>
+                        <li>Доступ назавжди в чат учнів!</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Катерина Панасенко. Всі права захищені.</p>
+    </footer>
+
+</body>
+
+</html>
+
+
+
+

@@ -1,0 +1,49 @@
+.benefits {
+    background: #ffffff;
+    padding: 60px 40px;
+    width: 100%;
+    margin: 0;
+}
+
+.benefits h2 {
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.benefits h2 span {
+    display: inline-block;
+    border-bottom: 3px solid #ff6600; /* Подчеркивание в общем стиле */
+    padding-bottom: 10px;
+}
+
+.benefits-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.benefit-list-left, .benefit-list-right {
+    list-style: none;
+    font-size: 20px;
+    color: #333;
+    line-height: 1.6;
+    width: 48%; /* Устанавливаем ширину для списка */
+}
+
+.benefit-list-left li, .benefit-list-right li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.checkmark {
+    color: #ff6600;
+    font-size: 24px;
+    margin-right: 10px; /* Отступ между галочкой и текстом */
+}
+
