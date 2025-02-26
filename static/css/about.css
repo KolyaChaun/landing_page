@@ -1,84 +1,191 @@
-#about {
-    background-color: #ffffff;
-    padding: 80px 40px;
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Секция обо мне */
+.about-me {
+    padding: 60px 0;
+    background-color: #fff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-top: -70px;
+}
+
+/* Общий контейнер */
 .container {
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
+/* Секция с текстом и фото */
 .about-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-.about-image {
-    flex: 1;
-    max-width: 350px;
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.profile-photo {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
+/* Текстовая часть */
 .about-text {
-    flex: 2;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
+    max-width: 60%;
+    line-height: 1.8;
+    text-align: left;
+    color: #444;
+    margin-bottom: 5px;
 }
 
 .about-text h2 {
-    font-size: 32px;
-    color: #333;
+    font-size: 2.4rem;
+    color: #ff6600;
+    margin-bottom: 10px;
     font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    text-align: left;
-    border-bottom: 3px solid #ff6600;
-    display: inline-block;
-    padding-bottom: 10px;
 }
 
+.subheading {
+    font-size: 1.5rem;
+    color: #888;
+    margin-bottom: 50px;
+    font-weight: 500;
+    margin-top: -20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Фото профиля */
+.about-image {
+    max-width: 35%;
+    text-align: center;
+    position: relative;
+    display: block;
+    margin-left: 40px;
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.05); /* Легкое увеличение изображения при наведении */
+}
+
+.profile-photo {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 6px solid #ff6600;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Секция с плюшками */
 .cta-section {
-    margin-top: 40px;
+    text-align: center;
+    margin-top: 60px;
 }
 
 .cta-section h3 {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 40px;
     color: #333;
-    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
+/* Стилизация списка плюшек */
 .cta-section ul {
-    list-style-type: none;
-    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 
 .cta-section ul li {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 30px;
+    border: 2px solid #ff6600;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    padding-left: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
 }
 
+.cta-section ul li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Нумерация в плюсах */
 .cta-section ul li::before {
-    content: "\2713"; /* Галочка */
+    content: attr(data-num);
     position: absolute;
-    left: 0;
-    top: 0;
-    color: #ff6600;
-    font-size: 22px;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    border: 3px solid #fff;
+}
+
+/* Анимация для плюсов */
+.cta-item {
+    opacity: 0;
+    transform: translateY(60px); /* Элемент начинается ниже */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Когда элемент становится видимым, добавляем класс */
+.cta-item.visible {
+    opacity: 1;
+    transform: translateY(0); /* Элемент поднимается наверх */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text, .about-image {
+        max-width: 100%;
+    }
+
+    .profile-photo {
+        width: 250px;
+        height: 250px;
+    }
+
+    .cta-section ul {
+        grid-template-columns: 1fr;
+    }
 }

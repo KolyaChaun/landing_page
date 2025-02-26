@@ -26,11 +26,14 @@
             </ul>
 
             <div class="social-icons">
+                <a href="https://t.me" target="_blank" aria-label="Telegram">
+                    <img src="{{ url_for('static', path='images/telegram-icon.png') }}" alt="Telegram">
+                </a>
                 <a href="https://instagram.com" target="_blank" aria-label="Instagram">
                     <img src="{{ url_for('static', path='images/instagram-icon.png') }}" alt="Instagram">
                 </a>
-                <a href="https://t.me" target="_blank" aria-label="Telegram">
-                    <img src="{{ url_for('static', path='images/telegram-icon.png') }}" alt="Telegram">
+                <a href="https://www.tiktok.com/@bayer.ekaterina?_t=ZM-8uFN1VbpKPG&_r=1" target="_blank" aria-label="TikTok">
+                    <img src="{{ url_for('static', path='images/tiktok-icon.png') }}" alt="TikTok">
                 </a>
             </div>
         </nav>
@@ -69,18 +72,19 @@
                             <h3 class="course-title">Taobao</h3>
                         </div>
                         <div class="course-content">
-                            <div class="course-image-wrapper">
-                                <img src="static/images/china-market.jpg" alt="Курс 1" class="course-image">
+                            <div class="course-image-wrapper" style="float: left; width: 40%; margin-right: 20px;">
+                                <img src="static/images/china-market.jpg" alt="Курс 1" class="course-image" style="width: 100%; height: auto;">
                             </div>
-                            <div class="course-description">
+                            <div class="course-description" style="float: left; width: 55%;">
                                 <p>Детальне пояснення, як правильно вибирати продавців, знаходити найвигідніші пропозиції та замовляти без посередників.</p>
                             </div>
+                            <div style="clear: both;"></div>
                         </div>
                         <div class="course-price-container">
                             <div class="course-price">
                                 <span>1149 грн</span>
                             </div>
-                            <a href="#" class="course-btn">програма курсу</a>
+                            <a href="#" class="course-btn">Програма курсу</a>
                         </div>
                     </div>
                 </div>
@@ -93,47 +97,53 @@
                             <h3 class="course-title">Pinduoduo</h3>
                         </div>
                         <div class="course-content">
-                            <div class="course-image-wrapper">
-                                <img src="static/images/china-market.jpg" alt="Курс 2" class="course-image">
+                            <div class="course-image-wrapper" style="float: left; width: 40%; margin-right: 20px;">
+                                <img src="static/images/china-market.jpg" alt="Курс 2" class="course-image" style="width: 100%; height: auto;">
                             </div>
-                            <div class="course-description">
+                            <div class="course-description" style="float: left; width: 55%;">
                                 <p>Як домовлятися про знижки, співпрацювати з виробниками та знаходити найкращі логістичні рішення.</p>
                             </div>
+                            <div style="clear: both;"></div>
                         </div>
                         <div class="course-price-container">
                             <div class="course-price">
                                 <span>1899 грн</span>
                             </div>
-                            <a href="#" class="course-btn">Записатись на курс</a>
+                            <a href="#" class="course-btn">Програма курсу</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about-me">
-            <div class="container">
-                <div class="about-wrapper">
-                    <div class="about-image">
-                        <img src="{{ url_for('static', path='images/profile.jpg') }}" alt="Катя" class="profile-photo">
-                    </div>
-                    <div class="about-text">
-                        <h2>Про мене</h2>
-                        <p>За весь час через мене пройшло 6000+ учнів, і я пишаюся цим! Весь свій «китайський досвід», а також досвід учнів я помістила до навчання.</p>
-                        <p>Як і багато хто, я починала знайомитися з Китаєм через AliExpress. Тоді це просто було бажання студентки зекономити. Я не знала, чим буду займатись по життю, і думки про пошук роботи мене лякали. Але завдяки Китаю я вже 9 років займаюся бізнесом в Інстаграмі, працюю саме на себе!</p>
-                        <p>На Алі спочатку закуповувала товар. А в один момент зрозуміла, що це дорого, настав час виходити на інший рівень, адже можна ж брати ті ж товари в кілька разів дешевше! Так і дійшла до теми Taobao, Pinduoduo та інших китайських майданчиків.</p>
-                    </div>
-                </div>
-                <div class="cta-section">
-                    <h3>Плюси навчання в мене:</h3>
-                    <ul>
-                        <li>Все пояснюю з нуля, структуровано + розкладено по поличкам.</li>
-                        <li>Не треба чекати старт потоку, всі матеріали в записі.</li>
-                        <li>Доступ назавжди в чат учнів!</li>
-                    </ul>
-                </div>
+        <section class="about-me" id="about">
+    <div class="container">
+        <div class="about-wrapper">
+            <!-- Секция с текстом -->
+            <div class="about-text">
+                <h2>Мене звати Катя,</h2>
+                <h3 class="subheading">і я вже 4 роки активно займаюся покупками у Китаї та веду блог</h3>
+                <p>Я спеціалізуюсь на виборі кращих товарів для вас, щоб покупка була максимально вигідною та безпечною. Маю великий досвід роботи з китайськими постачальниками, що дозволяє мені знайти найкращі пропозиції та зробити ваші покупки більш ефективними.</p>
             </div>
-        </section>
+
+            <!-- Секция с фото -->
+            <div class="about-image">
+                <img src="static/images/profile.jpg" alt="Мое фото" class="profile-photo">
+            </div>
+        </div>
+
+        <!-- Секция с плюшками -->
+        <div class="cta-section">
+            <h3>Плюси навчання в мене:</h3>
+            <ul>
+                <li class="cta-item" data-num="1">Все пояснюю з нуля, структуровано + розкладено по поличкам.</li>
+                <li class="cta-item" data-num="2">Не треба чекати старт потоку, всі матеріали в записі.</li>
+                <li class="cta-item" data-num="3">Доступ назавжди в чат учнів!</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
 
     </main>
 
@@ -141,9 +151,14 @@
         <p>&copy; 2025 Катерина Панасенко. Всі права захищені.</p>
     </footer>
 
+    <script src="{{ url_for('static', path='js/courses.js') }}"></script>
+    <script src="{{ url_for('static', path='js/about.js') }}"></script>
+
 </body>
 
 </html>
+
+
 
 
 

@@ -17,18 +17,25 @@
     transform: translate(-50%, -50%);
 }
 
+/* Подключение красивого шрифта */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .cta-button {
     background-color: #ff6600;
     color: white;
-    padding: 12px 24px;
-    font-size: 18px;
+    padding: 20px 60px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif; /* Используем стильный шрифт */
+    font-weight: bold;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px; /* Закругление углов */
     cursor: pointer;
     text-decoration: none;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .cta-button:hover {
     background-color: #e05500;
+    transform: scale(1.05); /* Легкое увеличение при наведении */
 }
+

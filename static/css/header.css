@@ -37,7 +37,7 @@ header {
     display: flex;
     gap: 15px;
     position: absolute;
-    right: 5px;
+    right: 30px;
 }
 
 .social-icons img {
