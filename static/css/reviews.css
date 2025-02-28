@@ -1,0 +1,140 @@
+/* Общие стили для блока "Отзывы учеников" */
+#reviews {
+    background: linear-gradient(135deg, #f9f9f9, #ff6600);
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 0;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    padding-bottom: 30px; /* Увеличиваем нижний отступ, чтобы не перекрывать пагинацию */
+}
+
+/* Стили для заголовка */
+#reviews h2 {
+    font-size: 25px; /* Уменьшаем размер шрифта */
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px; /* Уменьшаем отступ снизу */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 5px; /* Уменьшаем отступ снизу */
+    display: inline-block;
+    border: 2px solid #ff6600; /* Уменьшаем толщину линии */
+    border-radius: 20px;
+    padding: 10px 20px; /* Уменьшаем внутренние отступы */
+}
+
+/* Стиль для контейнера Swiper */
+.swiper-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; /* Прячем лишние слайды */
+    padding-bottom: 30px; /* Увеличиваем отступ снизу для слайдов */
+}
+
+/* Слайд и фото */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scale(0.85);
+    width: auto;
+}
+
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Стиль для изображений */
+.review-photo {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении на фото */
+.review-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Кнопки переключения */
+.prev-btn,
+.next-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: #ff6600;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Кнопка "назад" слева */
+.prev-btn {
+    left: 10px;
+}
+
+/* Кнопка "вперед" справа */
+.next-btn {
+    right: 10px;
+}
+
+/* Наведение на кнопки */
+.prev-btn:hover,
+.next-btn:hover {
+    color: #ff3300; /* При наведении цвет меняется */
+}
+
+/* Стиль для пагинации (точки) */
+.swiper-pagination {
+    position: absolute;
+    bottom: -20px;  /* Отступ снизу, чтобы точечки опустились ниже */
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;  /* Обеспечиваем, чтобы точки не перекрывались с другими элементами */
+}
+
+/* Стиль для точек */
+.swiper-pagination-bullet {
+    background: #ff6600 !important;  /* Оранжевые точки */
+    width: 9px !important;  /* Меньше размер точек */
+    height: 9px !important;  /* Меньше размер точек */
+    margin: 0 4px;
+    transition: background 0.3s ease;
+}
+
+/* Активная точка */
+.swiper-pagination-bullet-active {
+    background: #ff3300 !important;  /* Темно-оранжевые точки при активности */
+}
+
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    #reviews h2 {
+        font-size: 28px;
+    }
+    .swiper-slide {
+        transform: scale(0.9);
+    }
+}
+
+
