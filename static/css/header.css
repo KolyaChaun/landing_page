@@ -38,6 +38,7 @@ header {
     gap: 15px;
     position: absolute;
     right: 30px;
+    align-items: center; /* Выравнивание кнопки и иконок */
 }
 
 .social-icons img {
@@ -49,4 +50,48 @@ header {
 
 .social-icons a:hover img {
     transform: scale(1.1);
+}
+
+/* Кнопка консультации */
+.consultation-btn {
+    background-color: #ff6600; /* Оранжевый фон */
+    color: white;
+    font-size: 14px; /* Немного уменьшенный размер шрифта */
+    padding: 8px 16px; /* Уменьшенные отступы */
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 15px; /* Отступ справа, чтобы не было вплотную с иконками */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.consultation-btn:hover {
+    background-color: #ff3300; /* Темнее при наведении */
+    transform: scale(1.05); /* Немного увеличивается при наведении */
+}
+
+.consultation-btn:active {
+    transform: scale(1); /* Убираем увеличение при нажатии */
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .social-icons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .consultation-btn {
+        margin-right: 0; /* Убираем отступ для маленьких экранов */
+        margin-top: 10px;
+        width: 100%; /* Делает кнопку на всю ширину на мобильных устройствах */
+    }
+}
+
+#consultation {
+    scroll-margin-top: 50px; /* Смещение сверху при переходе к элементу */
 }

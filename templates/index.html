@@ -13,33 +13,47 @@
     <link rel="stylesheet" href="{{ url_for('static', path='css/china_study.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', path='css/about.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', path='css/reviews.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/consultation_form.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body>
 
     <header>
-        <nav class="nav">
-            <ul class="nav-links">
-                <li><a href="#home">ГОЛОВНА</a></li>
-                <li><a href="#about">ПРО МЕНЕ</a></li>
-                <li><a href="#study">НАВЧАННЯ</a></li>
-                <li><a href="#reviews">ВІДГУКИ</a></li>
-            </ul>
+    <nav class="nav">
+        <div class="logo">
+            <a href="#">Logo</a> <!-- Это может быть логотип или просто название -->
+        </div>
 
-            <div class="social-icons">
-                <a href="https://t.me" target="_blank" aria-label="Telegram">
-                    <img src="{{ url_for('static', path='images/telegram-icon.png') }}" alt="Telegram">
-                </a>
-                <a href="https://www.instagram.com/chinabykat/?igsh=Yzh2ZzhxZWk1NWE1#" target="_blank" aria-label="Instagram">
-                    <img src="{{ url_for('static', path='images/instagram-icon.png') }}" alt="Instagram">
-                </a>
-                <a href="https://www.tiktok.com/@bayer.ekaterina?_t=ZM-8uFN1VbpKPG&_r=1" target="_blank" aria-label="TikTok">
-                    <img src="{{ url_for('static', path='images/tiktok-icon.png') }}" alt="TikTok">
-                </a>
-            </div>
-        </nav>
-    </header>
+        <!-- Гамбургер-меню -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">ГОЛОВНА</a></li>
+            <li><a href="#about">ПРО МЕНЕ</a></li>
+            <li><a href="#study">НАВЧАННЯ</a></li>
+            <li><a href="#reviews">ВІДГУКИ</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="#consultation" class="consultation-btn">Отримати консультацію</a>
+            <a href="https://t.me" target="_blank" aria-label="Telegram">
+                <img src="{{ url_for('static', path='images/telegram-icon.png') }}" alt="Telegram">
+            </a>
+            <a href="https://www.instagram.com/chinabykat/?igsh=Yzh2ZzhxZWk1NWE1#" target="_blank" aria-label="Instagram">
+                <img src="{{ url_for('static', path='images/instagram-icon.png') }}" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@bayer.ekaterina?_t=ZM-8uFN1VbpKPG&_r=1" target="_blank" aria-label="TikTok">
+                <img src="{{ url_for('static', path='images/tiktok-icon.png') }}" alt="TikTok">
+            </a>
+        </div>
+    </nav>
+</header>
+
 
     <main>
 
@@ -116,6 +130,30 @@
             </div>
         </section>
 
+        <section id="consultation">
+    <h2>Отримати консультацію</h2>
+    <div class="form-container">
+        <form id="application-form" action="/submit_form" method="post">
+            <div class="input-group">
+                <label for="name">Ім'я</label>
+                <input type="text" id="name" name="name" placeholder="Введіть ім'я" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Номер телефону</label>
+                <input type="tel" id="phone" name="phone" placeholder="+380 (__) ___-__-__" required>
+            </div>
+            <button type="submit">Відправити</button>
+        </form>
+    </div>
+</section>
+<div id="popup" class="popup">
+        <div class="popup-content">
+            <h3>Дякуємо, ваша заявка успішно відправлена!</h3>
+            <button id="close-popup" class="close-btn">Закрити</button>
+        </div>
+    </div>
+
+
         <section class="about-me" id="about">
             <div class="container">
                 <div class="about-wrapper">
@@ -189,14 +227,15 @@
     </footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url_for('static', path='js/header.js') }}"></script>
     <script src="{{ url_for('static', path='js/courses.js') }}"></script>
+    <script src="{{ url_for('static', path='js/consultation_form.js') }}"></script>
     <script src="{{ url_for('static', path='js/about.js') }}"></script>
     <script src="{{ url_for('static', path='js/reviews.js') }}"></script>
 
 </body>
 
 </html>
-
 
 
 
