@@ -10,15 +10,26 @@ header {
 
 .nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 25px 0;
+    padding: 25px 30px;
+    width: 100%;
 }
 
+.logo a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Центрируем меню */
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
+    align-items: center;
+    justify-content: flex-end; /* Меню сдвигается вправо */
 }
 
 .nav-links li a {
@@ -33,17 +44,18 @@ header {
     color: #ff6600;
 }
 
+/* Социальные иконки */
 .social-icons {
     display: flex;
     gap: 15px;
-    position: absolute;
-    right: 30px;
-    align-items: center; /* Выравнивание кнопки и иконок */
+    align-items: center;
+    margin-left: auto;
+    justify-content: flex-end; /* Сдвигаем иконки вправо */
 }
 
 .social-icons img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     transition: transform 0.3s;
 }
@@ -52,46 +64,112 @@ header {
     transform: scale(1.1);
 }
 
-/* Кнопка консультации */
 .consultation-btn {
-    background-color: #ff6600; /* Оранжевый фон */
+    background-color: #ff6600;
     color: white;
-    font-size: 14px; /* Немного уменьшенный размер шрифта */
-    padding: 8px 16px; /* Уменьшенные отступы */
+    font-size: 12px;
+    padding: 8px 16px;
     border-radius: 30px;
     text-align: center;
     text-decoration: none;
-    margin-right: 15px; /* Отступ справа, чтобы не было вплотную с иконками */
+    margin-right: 15px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s, transform 0.3s;
+    margin-left: 162px;
 }
 
 .consultation-btn:hover {
-    background-color: #ff3300; /* Темнее при наведении */
-    transform: scale(1.05); /* Немного увеличивается при наведении */
+    background-color: #ff3300;
+    transform: scale(1.05);
 }
 
 .consultation-btn:active {
-    transform: scale(1); /* Убираем увеличение при нажатии */
+    transform: scale(1);
 }
 
-/* Адаптивные стили */
+/* Для мобильных устройств */
+.hamburger {
+    display: none; /* Скрываем бургер-меню на десктопе */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Стили для мобильных устройств */
 @media (max-width: 768px) {
+    .nav {
+        justify-content: space-between; /* Контейнер меню будет занимать всё пространство */
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Меню будет вертикальным */
+        display: none; /* Скрываем меню */
+        position: absolute;
+        top: 55px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: none;
+        gap: 10px;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-links li a {
+        padding: 15px 20px;
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+
     .social-icons {
         display: flex;
-        justify-content: space-between;
+        gap: 15px;
+        justify-content: center;
+        padding: 15px 20px;
         width: 100%;
+        margin-top: 15px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
     }
 
     .consultation-btn {
-        margin-right: 0; /* Убираем отступ для маленьких экранов */
-        margin-top: 10px;
-        width: 100%; /* Делает кнопку на всю ширину на мобильных устройствах */
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        font-size: 14px;
+        margin-top: -5px;
     }
-}
 
-#consultation {
-    scroll-margin-top: 50px; /* Смещение сверху при переходе к элементу */
+    .social-icons a {
+        display: inline-block;
+        text-align: center;
+    }
+
+    /* Бургер-меню */
+    .hamburger {
+        display: flex; /* Показываем бургер-меню */
+    }
 }

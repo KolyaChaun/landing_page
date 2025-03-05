@@ -38,4 +38,23 @@
     background-color: #e05500;
     transform: scale(1.05); /* Легкое увеличение при наведении */
 }
+@media (max-width: 768px) {
+    #home {
+        background-image: url('../images/banner-mobile.png'); /* Мобильное изображение */
+        background-size: cover; /* Покрытие всего экрана */
+        height: 300px; /* Уменьшаем высоту баннера на мобильных устройствах */
+        margin-top: 55px;
+        scroll-margin-top: 60px;
+    }
 
+    .banner-content {
+        top: 95%; /* Центрируем контент по вертикали */
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%); /* Центрируем по горизонтали и вертикали */
+    }
+
+    .cta-button {
+        padding: 15px 40px; /* Уменьшаем отступы на мобильных устройствах */
+        font-size: 16px; /* Уменьшаем размер шрифта */
+    }
+}

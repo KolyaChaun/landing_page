@@ -183,6 +183,9 @@ body {
     .profile-photo {
         width: 250px;
         height: 250px;
+        display: block;
+        margin: 0 auto;
+        transform: scale(1.1) translateX(-20px);
     }
 
     .cta-section ul {
