@@ -37,3 +37,8 @@ async def submit_form(name: str = Form(...), phone: str = Form(...)):
         send_message_to_telegram(name, phone)
         return JSONResponse(content={"success": True})
     return JSONResponse(content={"success": False})
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8080))  # Используем PORT из окружения (или 8080 по умолчанию)
+    uvicorn.run(app, host="0.0.0.0", port=port)
