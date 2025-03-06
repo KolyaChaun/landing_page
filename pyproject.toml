@@ -3,7 +3,7 @@ name = "landing_page"
 version = "0.1.0"
 description = "This is a small, one-page site that calls on the customer to take one specific action."
 authors = [
-    {name = "Mykola",email = "kolia.chaun@icloud.com"}
+    {name = "Mykola", email = "kolia.chaun@icloud.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.12"
@@ -21,6 +21,7 @@ isort = "^6.0.0"
 black = "^25.1.0"
 flake8 = "^7.1.1"
 
+[tool.poetry]
 packages = [
     { include = "src" }
 ]
@@ -28,6 +29,7 @@ packages = [
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
 
 
 
