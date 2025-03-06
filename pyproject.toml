@@ -1,5 +1,5 @@
 [project]
-name = "landing-page"
+name = "landing_page"
 version = "0.1.0"
 description = "This is a small, one-page site that calls on the customer to take one specific action."
 authors = [
@@ -21,6 +21,9 @@ isort = "^6.0.0"
 black = "^25.1.0"
 flake8 = "^7.1.1"
 
+packages = [
+    { include = "src" }
+]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
