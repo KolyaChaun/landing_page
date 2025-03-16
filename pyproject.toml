@@ -1,0 +1,35 @@
+[project]
+name = "landing-page"
+version = "0.1.0"
+description = "This is a small, one-page site that calls on the customer to take one specific action."
+authors = [
+    {name = "Mykola", email = "kolia.chaun@icloud.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi (>=0.115.8,<0.116.0)",
+    "uvicorn (>=0.34.0,<0.35.0)",
+    "jinja2  (>=3.1.5)",
+    "python-multipart (>=0.0.20,<0.0.21)",
+    "requests (>=2.32.3,<3.0.0)",
+    "dotenv (>=0.9.9,<0.10.0)",
+]
+
+[tool.poetry.group.dev.dependencies]
+isort = "^6.0.0"
+black = "^25.1.0"
+flake8 = "^7.1.1"
+
+[tool.poetry]
+packages = [
+    { include = "src" }
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+
+

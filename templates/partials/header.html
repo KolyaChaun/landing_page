@@ -1,0 +1,32 @@
+<header>
+    <nav class="nav">
+        <div class="logo">
+            <a href="/">
+                <img src="{{ url_for('static', path='images/logo.jpg') }}" alt="Logo">
+            </a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="{{ url_for('home') }}#home">ГОЛОВНА</a></li>
+            <li><a href="{{ url_for('about') }}#about">ПРО МЕНЕ</a></li>
+            <li><a href="{{ url_for('china_study') }}#study">НАВЧАННЯ</a></li>
+            <li><a href="{{ url_for('reviews') }}#reviews">ВІДГУКИ</a></li>
+            <div class="social-icons">
+                <a href="#consultation" class="consultation-btn">Отримати консультацію</a>
+                <a href="https://t.me" target="_blank">
+                    <img src="{{ url_for('static', path='images/telegram-icon.png') }}" alt="Telegram">
+                </a>
+                <a href="https://www.instagram.com/chinabykat" target="_blank">
+                    <img src="{{ url_for('static', path='images/instagram-icon.png') }}" alt="Instagram">
+                </a>
+                <a href="https://www.tiktok.com/@bayer.ekaterina" target="_blank">
+                    <img src="{{ url_for('static', path='images/tiktok-icon.png') }}" alt="TikTok">
+                </a>
+            </div>
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinduoduo</title>
+    <link rel="icon" href="{{ url_for('static', path='images/favicon.ico') }}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{{ url_for('static', path='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/footer.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+
+    {% include 'partials/header.html' %}
+
+    <main>
+        <section class="home-intro">
+            <div class="container">
+                <h1>Ласкаво просимо на нашу сторінку з описом курсу по Pinduoduo</h1>
+                <p>Це тестова сторінка.</p>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    {% include 'partials/footer.html' %}
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url_for('static', path='js/header.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна</title>
+    <link rel="icon" href="{{ url_for('static', path='images/favicon.ico') }}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{{ url_for('static', path='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/sections.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/china_study.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/reviews.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/consultation_form.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+
+    {% include 'partials/header.html' %}
+
+    <main>
+
+        <section id="home">
+            <div class="banner-content">
+                <a href="#study" class="cta-button">Почати</a>
+            </div>
+        </section>
+
+        <section id="study" class="benefits">
+            <h2><span>Ви за адресою, якщо:</span></h2>
+            <div class="benefits-wrapper">
+                <ul class="benefit-list-left">
+                    <li><span class="checkmark">&#10003;</span> Бажаєте економити і не переплачувати у нас в магазинах.</li>
+                    <li><span class="checkmark">&#10003;</span> Хочете обирати з найбільшого асортименту товарів.</li>
+                </ul>
+                <ul class="benefit-list-right">
+                    <li><span class="checkmark">&#10003;</span> Цікаво стати байєром товарів з Китаю і заробляти на цьому.</li>
+                    <li><span class="checkmark">&#10003;</span> Вже маєте або плануєте відкрити власний бізнес, магазин.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="china-study">
+            <h2><span class="underline-text">Навчаю як купувати на китайських майданчиках</span></h2>
+            <div class="courses">
+                <div class="course-item">
+                    <div class="course-info">
+                        <div class="course-header">
+                            <div class="course-number">01</div>
+                            <h3 class="course-title">Taobao</h3>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-image-wrapper">
+                                <img src="static/images/china-market.jpg" alt="Course 1" class="course-image">
+                            </div>
+                            <div class="course-description">
+                                <p>Детальне пояснення, як правильно вибирати продавців, знаходити найвигідніші пропозиції та замовляти без посередників.</p>
+                            </div>
+                        </div>
+                        <div class="course-price-container">
+                            <div class="course-price">
+                                <span>1149 грн</span>
+                            </div>
+                            <a href="/taobao" class="course-btn">Програма курсу</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-item">
+                    <div class="course-info">
+                        <div class="course-header">
+                            <div class="course-number">02</div>
+                            <h3 class="course-title">Pinduoduo</h3>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-image-wrapper">
+                                <img src="static/images/china-market.jpg" alt="Course 2" class="course-image">
+                            </div>
+                            <div class="course-description">
+                                <p>Як домовлятися про знижки, співпрацювати з виробниками та знаходити найкращі логістичні рішення.</p>
+                            </div>
+                        </div>
+                        <div class="course-price-container">
+                            <div class="course-price">
+                                <span>1899 грн</span>
+                            </div>
+                            <a href="/pinduoduo" class="course-btn">Програма курсу</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="consultation">
+            <h2>Отримати консультацію</h2>
+            <div class="form-container">
+                <form id="application-form" action="/submit_form" method="post">
+                    <div class="input-group">
+                        <label for="name">Ім'я</label>
+                        <input type="text" id="name" name="name" placeholder="Введіть ім'я" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Номер телефону</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+380 (__) ___-__-__" required>
+                    </div>
+                    <button type="submit">Відправити</button>
+                </form>
+            </div>
+        </section>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <h3>Дякуємо, ваша заявка успішно відправлена!</h3>
+                <button id="close-popup" class="close-btn">Закрити</button>
+            </div>
+        </div>
+
+        <section class="about-me" id="about">
+            <div class="container">
+                <div class="about-wrapper">
+                    <div class="about-text">
+                        <h2>Мене звати Катя,</h2>
+                        <h3 class="subheading">і я вже 4 роки активно займаюся покупками у Китаї та веду блог</h3>
+                        <p>Я спеціалізуюсь на виборі кращих товарів для вас, щоб покупка була максимально вигідною та безпечною. Маю великий досвід роботи з китайськими постачальниками, що дозволяє мені знайти найкращі пропозиції та зробити ваші покупки більш ефективними.</p>
+                    </div>
+
+                    <div class="about-image">
+                        <img src="static/images/profile.jpg" alt="Photo-profile" class="profile-photo">
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h3>Плюси навчання в мене:</h3>
+                    <ul>
+                        <li class="cta-item" data-num="1">Все пояснюю з нуля, структуровано + розкладено по поличкам.</li>
+                        <li class="cta-item" data-num="2">Не треба чекати старт потоку, всі матеріали в записі.</li>
+                        <li class="cta-item" data-num="3">Доступ назавжди в чат учнів!</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div id="reviews">
+            <h2>Відгуки:</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/static/images/reviews/review%201.PNG" alt="Review 1" class="review-photo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/static/images/reviews/review%202.PNG" alt="Review 2" class="review-photo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/static/images/reviews/review%203.PNG" alt="Review 3" class="review-photo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/static/images/reviews/review%204.PNG" alt="Review 4" class="review-photo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/static/images/reviews/review%205.PNG" alt="Review 5" class="review-photo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/static/images/reviews/review%206.PNG" alt="Review 6" class="review-photo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/static/images/reviews/review%207.PNG" alt="Review 7" class="review-photo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/static/images/reviews/review%208.PNG" alt="Review 8" class="review-photo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/static/images/reviews/review%209.PNG" alt="Review 9" class="review-photo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/static/images/reviews/review%2010.PNG" alt="Review 10" class="review-photo">
+                    </div>
+                </div>
+                <button class="prev-btn">◀</button>
+                <button class="next-btn">▶</button>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+    </main>
+
+    {% include 'partials/footer.html' %}
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url_for('static', path='js/header.js') }}"></script>
+    <script src="{{ url_for('static', path='js/courses.js') }}"></script>
+    <script src="{{ url_for('static', path='js/consultation_form.js') }}"></script>
+    <script src="{{ url_for('static', path='js/about.js') }}"></script>
+    <script src="{{ url_for('static', path='js/reviews.js') }}"></script>
+
+</body>
+
+</html>
+
+
+
+
