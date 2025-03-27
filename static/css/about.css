@@ -88,6 +88,7 @@ body {
     border: 6px solid #ff6600;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     object-fit: cover;
+    object-position: right 10px top -25px;
 }
 
 /* Секция с плюшками */
