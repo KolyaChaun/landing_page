@@ -172,6 +172,10 @@ body {
 
 /* Адаптивность */
 @media (max-width: 768px) {
+    .about-text h2 {
+        font-size: 2rem; /* Уменьшаем размер шрифта для мобильных устройств */
+    }
+
     .about-wrapper {
         flex-direction: column;
         text-align: center;
