@@ -195,7 +195,7 @@
 
     .left-column li,
     .right-column li {
-        padding-left: 0;
+        padding-left: 10px;
         display: flex;
         align-items: center;
         padding-top: 12px;
@@ -237,7 +237,8 @@
     .right-column li {
         gap: 15px;
     }
+
+    .cta-section ul li {
+        max-width: 370px;
+    }
 }
-
-
-
