@@ -1,0 +1,146 @@
+.image-and-content {
+    width: 100%;
+    margin-top: 60px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.signup-button-on-image {
+    position: absolute;
+    bottom: 75px;
+    left: 49%;
+    transform: translateX(-50%);
+    background-color: #c72432;
+    color: white;
+    font-size: 25px;
+    padding: 16px 36px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+.signup-button-on-image:hover {
+    background-color: #a8210d;
+}
+
+.what-is-included {
+    background-color: #ffffff;
+    padding: 20px 15px;
+    border-radius: 15px;
+    width: 100%;
+    margin-top: 0;
+}
+
+.what-is-included h2 {
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: -30px;
+}
+
+.what-is-included h2 span {
+    display: inline-block;
+    border-bottom: 3px solid #c72432;
+    padding-bottom: 10px;
+}
+
+.what-is-included ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.what-is-included ul li {
+    font-size: 18px;
+    padding: 6px 0;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+.checkmark {
+    color: #c72432;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.image-and-content > .image-container,
+.image-and-content > .what-is-included {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .image-container img {
+        content: url('/static/images/course-pinduoduo-mobile.png');
+        margin-top: -5px;
+    }
+    .signup-button-on-image {
+        font-size: 11px;
+        padding: 10px 30px;
+        bottom: 49px;
+        left: 47.2%;
+        transform: translateX(-45%);
+    }
+
+    .what-is-included h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        margin-top: -10px;
+        text-align: center;
+    }
+
+    .what-is-included .container {
+        padding: 40px 20px;
+        width: 100%;
+        margin-top: -20px;
+    }
+
+    .what-is-included ul li {
+        font-size: 17px;
+        padding: 6px 0;
+        line-height: 1.5;
+    }
+
+    .what-is-included ul {
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: -20px;
+    }
+
+    .what-is-included ul li {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .checkmark {
+        font-size: 20px;
+    }
+
+    .what-is-included {
+        padding: 20px 10px;
+    }
+}
