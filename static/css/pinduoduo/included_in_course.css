@@ -93,6 +93,36 @@
     padding: 0;
 }
 
+@media (max-width: 1024px) {
+    .image-container img {
+        content: url('/static/images/course-pinduoduo-mobile.png'); /* можно использовать другое изображение */
+        margin-top: 0;
+    }
+
+    .signup-button-on-image {
+        font-size: 25px;
+        padding: 12px 30px;
+        bottom: 100px;
+        left: 48%;
+        transform: translateX(-50%);
+    }
+
+    .what-is-included h2 {
+        font-size: 24px;
+        text-align: center;
+        margin-top: -15px;
+        margin-bottom: 25px;
+    }
+
+    .what-is-included ul li {
+        font-size: 17px;
+    }
+
+    .what-is-included {
+        padding: 25px 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .image-container img {
         content: url('/static/images/course-pinduoduo-mobile.png');
@@ -142,5 +172,35 @@
 
     .what-is-included {
         padding: 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container img {
+        content: url('/static/images/course-pinduoduo-mobile.png');
+        margin-top: -5px;
+    }
+
+    .signup-button-on-image {
+        font-size: 10px;
+        padding: 7px 18px;
+        bottom: 38px;
+        left: 46.5%;
+        transform: translateX(-45%);
+    }
+
+    .what-is-included h2 {
+        font-size: 20px;
+        margin-top: -10px;
+        margin-bottom: 20px;
+    }
+
+    .what-is-included ul li {
+        font-size: 16px;
+        padding: 5px 0;
+    }
+
+    .what-is-included {
+        padding: 15px 10px;
     }
 }
