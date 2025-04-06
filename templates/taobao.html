@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="{{ url_for('static', path='css/header.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', path='css/footer.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/taobao/included_in_course.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/taobao/price_comparison.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/taobao/course_program.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/taobao/price.css') }}">
 </head>
 
 <body>
@@ -18,14 +22,71 @@
     {% include 'partials/header.html' %}
 
     <main>
-        <section class="home-intro">
-            <div class="container">
-                <h1>Ласкаво просимо на нашу сторінку з описом курсу по Таобао</h1>
-                <p>Це тестова сторінка.</p>
+        <section class="image-and-content">
+            <div class="image-container">
+                <img src="{{ url_for('static', path='images/course-taobao.png') }}" alt="Курс по Taobao">
+                <a href="#form" class="signup-button-on-image">Записатися</a>
+            </div>
+
+            <div class="what-is-included">
+                <div class="container">
+                    <h2><span>ЩО ВХОДИТЬ:</span></h2>
+                    <ul>
+                        <li><span class="checkmark">&#10003;</span> Чек-листи, корисні інструменти та шаблони фраз для спілкування з продавцями</li>
+                        <li><span class="checkmark">&#10003;</span> Тонкощі покупок у розпродажі (11.11, Чорна п’ятниця та інші)</li>
+                        <li><span class="checkmark">&#10003;</span> Словник - корисні фрази для спілкування з продавцями</li>
+                        <li><span class="checkmark">&#10003;</span> Закритий чат підтримки для учнів, де ділимося досвідом</li>
+                        <li><span class="checkmark">&#10003;</span> Зворотній звʼязок без обмежень, якщо виникнуть додаткові питання</li>
+                        <li><span class="checkmark">&#10003;</span> Курс залишається у вільному доступі. Можете навчатися, коли вам зручно</li>
+                        <li><span class="checkmark">&#10003;</span> Доступ залишається назавжди</li>
+                    </ul>
+                </div>
             </div>
         </section>
-
-
+        <div class="full-width-image">
+            <img src="{{ url_for('static', path='images/price-comparison-tao.png') }}" alt="Taobao Bottom Image">
+        </div>
+        <div class="course-program">
+            <div class="container">
+                <h2><span>ПРОГРАМА КУРСУ:</span></h2>
+                <div class="program-columns">
+                    <div class="column">
+                        <ol class="program-list left-column">
+                            <li>Реєстрація</li>
+                            <li>Способи перекладу Таобао</li>
+                            <li>Знайомство з функціоналом: кошик, обране</li>
+                            <li>Пошук, картка товару, рейтинг продавця, відгуки</li>
+                            <li>Як обрати розмір</li>
+                        </ol>
+                    </div>
+                    <div class="column">
+                        <ol class="program-list right-column">
+                            <li>Фрази для спілкування з продавцем</li>
+                            <li>Про доставку в Україну, як заповнити адресу</li>
+                            <li>Перша оплата замовлення</li>
+                            <li>Де знайти номер накладної</li>
+                            <li>Проблемні ситуації, як зробити повернення коштів і товару</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cta-section">
+        <h3>Навчитесь:</h3>
+        <ul>
+            <li class="cta-item" data-num="1">Без знань китайської користуватися сайтом Таобао з комп'ютера і через моб.додаток</li>
+            <li class="cta-item" data-num="2">Знаходити товари по фото! Як в Instagram, але дешевше</li>
+            <li class="cta-item" data-num="3">Викуповувати з сайту без переплати % посередникам і доставляти собі в Україну</li>
+        </ul>
+    </div>
+    <div class="cta-price">
+        <div class="container">
+            <div class="price-container">
+                <span class="price">Ціна: 950 грн</span>
+            </div>
+            <a href="#form" class="signup-button">Записатися</a>
+        </div>
+    </div>
 
     </main>
 
@@ -33,6 +94,7 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="{{ url_for('static', path='js/header.js') }}"></script>
+    <script src="{{ url_for('static', path='js/taobao/course_program.js') }}"></script>
 
 </body>
 

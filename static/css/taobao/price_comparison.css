@@ -1,0 +1,14 @@
+.full-width-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: -40px 0 0 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .full-width-image img {
+        content: url('/static/images/price-comparison-mobile.png');
+        margin: -20px 0 0 0;
+    }
+}
