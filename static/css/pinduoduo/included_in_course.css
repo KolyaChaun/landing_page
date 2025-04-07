@@ -92,6 +92,21 @@
     margin: 0;
     padding: 0;
 }
+@media (max-width: 1100px) {
+    .image-container img {
+        content: url('/static/images/course-pinduoduo.png');
+        margin-top: 0;
+    }
+
+    .signup-button-on-image {
+        font-size: 12px;
+        padding: 10px 28px;
+        bottom: 45px;
+        left: 49%;
+        transform: translateX(-50%);
+    }
+
+}
 
 @media (max-width: 800px) {
     .image-container img {
@@ -108,18 +123,41 @@
     }
 
     .what-is-included h2 {
-        font-size: 24px;
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        margin-top: -10px;
         text-align: center;
-        margin-top: -15px;
-        margin-bottom: 25px;
+    }
+
+    .what-is-included .container {
+        padding: 40px 20px;
+        width: 100%;
+        margin-top: -20px;
     }
 
     .what-is-included ul li {
         font-size: 17px;
+        padding: 6px 0;
+        line-height: 1.5;
+    }
+
+    .what-is-included ul {
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: -20px;
+    }
+
+    .what-is-included ul li {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .checkmark {
+        font-size: 20px;
     }
 
     .what-is-included {
-        padding: 25px 20px;
+        padding: 20px 10px;
     }
 }
 
@@ -151,7 +189,6 @@
         left: 47.2%;
         transform: translateX(-45%);
     }
-
 }
 
 @media (max-width: 375px) {
@@ -167,7 +204,6 @@
         left: 46.5%;
         transform: translateX(-45%);
     }
-
 }
 
 @media (max-width: 360px) {
