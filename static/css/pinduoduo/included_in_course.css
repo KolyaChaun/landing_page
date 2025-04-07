@@ -92,16 +92,17 @@
     margin: 0;
     padding: 0;
 }
-@media (max-width: 770px) {
+
+@media (max-width: 800px) {
     .image-container img {
         content: url('/static/images/course-pinduoduo-mobile.png');
         margin-top: 0;
     }
 
     .signup-button-on-image {
-        font-size: 25px;
+        font-size: 27px;
         padding: 10px 28px;
-        bottom: 100px;
+        bottom: 105px;
         left: 48%;
         transform: translateX(-50%);
     }
@@ -129,27 +130,13 @@
     }
 
     .signup-button-on-image {
-        font-size: 12px;
+        font-size: 11px;
         padding: 10px 28px;
-        bottom: 51px;
+        bottom: 55px;
         left: 48%;
         transform: translateX(-50%);
     }
 
-    .what-is-included h2 {
-        font-size: 24px;
-        text-align: center;
-        margin-top: -15px;
-        margin-bottom: 25px;
-    }
-
-    .what-is-included ul li {
-        font-size: 17px;
-    }
-
-    .what-is-included {
-        padding: 25px 20px;
-    }
 }
 
 @media (max-width: 400px) {
@@ -158,50 +145,13 @@
         margin-top: -5px;
     }
     .signup-button-on-image {
-        font-size: 11px;
+        font-size: 10px;
         padding: 10px 28px;
-        bottom: 46px;
+        bottom: 48px;
         left: 47.2%;
         transform: translateX(-45%);
     }
 
-    .what-is-included h2 {
-        font-size: 1.5rem;
-        margin-bottom: 30px;
-        margin-top: -10px;
-        text-align: center;
-    }
-
-    .what-is-included .container {
-        padding: 40px 20px;
-        width: 100%;
-        margin-top: -20px;
-    }
-
-    .what-is-included ul li {
-        font-size: 17px;
-        padding: 6px 0;
-        line-height: 1.5;
-    }
-
-    .what-is-included ul {
-        padding-left: 0;
-        margin-left: 0;
-        margin-top: -20px;
-    }
-
-    .what-is-included ul li {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .checkmark {
-        font-size: 20px;
-    }
-
-    .what-is-included {
-        padding: 20px 10px;
-    }
 }
 
 @media (max-width: 375px) {
@@ -211,25 +161,26 @@
     }
 
     .signup-button-on-image {
-        font-size: 12px;
+        font-size: 11px;
         padding: 7px 18px;
         bottom: 49px;
         left: 46.5%;
         transform: translateX(-45%);
     }
 
-    .what-is-included h2 {
-        font-size: 20px;
-        margin-top: -10px;
-        margin-bottom: 20px;
+}
+
+@media (max-width: 360px) {
+    .image-container img {
+        content: url('/static/images/course-pinduoduo-mobile.png');
+        margin-top: -5px;
     }
 
-    .what-is-included ul li {
-        font-size: 16px;
-        padding: 5px 0;
-    }
-
-    .what-is-included {
-        padding: 15px 10px;
+    .signup-button-on-image {
+        font-size: 9px;
+        padding: 7px 18px;
+        bottom: 42px;
+        left: 46.5%;
+        transform: translateX(-45%);
     }
 }
