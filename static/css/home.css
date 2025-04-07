@@ -17,7 +17,6 @@
     transform: translate(-50%, -50%);
 }
 
-/* Подключение красивого шрифта */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .cta-button {
@@ -25,10 +24,10 @@
     color: white;
     padding: 25px 110px;
     font-size: 20px;
-    font-family: 'Roboto', sans-serif; /* Используем стильный шрифт */
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     border: none;
-    border-radius: 12px; /* Закругление углов */
+    border-radius: 12px;
     cursor: pointer;
     text-decoration: none;
     transition: background 0.3s, transform 0.2s;
@@ -37,105 +36,105 @@
 
 .cta-button:hover {
     background-color: #e05500;
-    transform: scale(1.05); /* Легкое увеличение при наведении */
+    transform: scale(1.05);
 }
 @media (max-width: 1100px) {
     #home {
-        background-image: url('../images/banner-mobile.png'); /* Мобильное изображение */
-        background-size: cover; /* Покрытие всего экрана */
-        height: 300px; /* Уменьшаем высоту баннера на мобильных устройствах */
+        background-image: url('../images/banner-mobile.png');
+        background-size: cover;
+        height: 600px;
         margin-top: 55px;
         scroll-margin-top: 60px;
     }
 
     .banner-content {
-        top: 95%; /* Центрируем контент по вертикали */
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%); /* Центрируем по горизонтали и вертикали */
+        top: 95%;
+        left: 45%;
+        transform: translateX(-50%) translateY(-50%);
     }
 
     .cta-button {
-        padding: 15px 40px; /* Уменьшаем отступы на мобильных устройствах */
-        font-size: 16px; /* Уменьшаем размер шрифта */
+        padding: 20px 60px;
+        font-size: 20px;
     }
 }
 @media (max-width: 800px) {
     #home {
-        background-image: url('../images/banner-mobile.png'); /* Мобильное изображение */
-        background-size: cover; /* Покрытие всего экрана */
-        height: 550px; /* Уменьшаем высоту баннера на мобильных устройствах */
+        background-image: url('../images/banner-mobile.png');
+        background-size: cover;
+        height: 550px;
         margin-top: 55px;
         scroll-margin-top: 60px;
     }
 
     .banner-content {
-        top: 100%; /* Центрируем контент по вертикали */
+        top: 100%;
         left: 45%;
-        transform: translateX(-50%) translateY(-170%); /* Центрируем по горизонтали и вертикали */
+        transform: translateX(-50%) translateY(-170%);
     }
 
     .cta-button {
-        padding: 23px 60px; /* Уменьшаем отступы на мобильных устройствах */
-        font-size: 25px; /* Уменьшаем размер шрифта */
+        padding: 23px 60px;
+        font-size: 25px;
     }
 }
 @media (max-width: 430px) {
     #home {
-        background-image: url('../images/banner-mobile.png'); /* Мобильное изображение */
-        background-size: cover; /* Покрытие всего экрана */
-        height: 300px; /* Уменьшаем высоту баннера на мобильных устройствах */
+        background-image: url('../images/banner-mobile.png');
+        background-size: cover;
+        height: 300px;
         margin-top: 55px;
         scroll-margin-top: 60px;
     }
 
     .banner-content {
-        top: 95%; /* Центрируем контент по вертикали */
+        top: 95%;
         left: 40%;
-        transform: translateX(-50%) translateY(-50%); /* Центрируем по горизонтали и вертикали */
+        transform: translateX(-50%) translateY(-50%);
     }
 
     .cta-button {
-        padding: 15px 40px; /* Уменьшаем отступы на мобильных устройствах */
-        font-size: 16px; /* Уменьшаем размер шрифта */
+        padding: 15px 40px;
+        font-size: 16px;
     }
 }
 @media (max-width: 400px) {
     #home {
-        background-image: url('../images/banner-mobile.png'); /* Мобильное изображение */
-        background-size: cover; /* Покрытие всего экрана */
-        height: 300px; /* Уменьшаем высоту баннера на мобильных устройствах */
+        background-image: url('../images/banner-mobile.png');
+        background-size: cover;
+        height: 300px;
         margin-top: 55px;
         scroll-margin-top: 60px;
     }
 
     .banner-content {
-        top: 95%; /* Центрируем контент по вертикали */
+        top: 95%;
         left: 40%;
-        transform: translateX(-50%) translateY(-50%); /* Центрируем по горизонтали и вертикали */
+        transform: translateX(-50%) translateY(-50%);
     }
 
     .cta-button {
-        padding: 15px 40px; /* Уменьшаем отступы на мобильных устройствах */
-        font-size: 16px; /* Уменьшаем размер шрифта */
+        padding: 15px 40px;
+        font-size: 16px;
     }
 }
 @media (max-width: 375px) {
     #home {
-        background-image: url('../images/banner-mobile.png'); /* Мобильное изображение */
-        background-size: cover; /* Покрытие всего экрана */
-        height: 250px; /* Уменьшаем высоту баннера на мобильных устройствах */
+        background-image: url('../images/banner-mobile.png');
+        background-size: cover;
+        height: 250px;
         margin-top: 55px;
         scroll-margin-top: 60px;
     }
 
     .banner-content {
-        top: 95%; /* Центрируем контент по вертикали */
-        left: 37%;
-        transform: translateX(-50%) translateY(-50%); /* Центрируем по горизонтали и вертикали */
+        top: 95%;
+        left: 38.5%;
+        transform: translateX(-50%) translateY(-50%);
     }
 
     .cta-button {
-        padding: 13px 30px; /* Уменьшаем отступы на мобильных устройствах */
-        font-size: 14px; /* Уменьшаем размер шрифта */
+        padding: 13px 30px;
+        font-size: 14px;
     }
 }

@@ -47,7 +47,7 @@
 .course-content {
     display: flex;
     flex-direction: row;
-    width: 100%; /* Обеспечиваем, чтобы контент занимал всю ширину */
+    width: 100%;
 }
 .course-item.show {
     opacity: 1;
@@ -141,7 +141,6 @@
     background-color: #ff4d00;
 }
 
-/* Анимация появления */
 @keyframes reveal {
     0% {
         opacity: 0;
@@ -153,7 +152,125 @@
     }
 }
 
-/* Мобильная версия */
+@media (max-width: 1100px) {
+    #china-study {
+        padding: 30px 15px;
+        margin-top: -30px;
+    }
+
+    .courses {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .course-item {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .course-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-image-wrapper {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .course-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .course-description {
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 0 15px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .course-info {
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+    }
+
+    .course-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .course-number {
+        font-size: 1.8rem;
+        padding: 8px;
+        background-color: #ff6600;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+    }
+
+    .course-title {
+        font-size: 1.6rem;
+        margin-top: 10px;
+    }
+
+    .course-price-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .course-price {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #ff6600;
+    }
+
+    .course-btn {
+        font-size: 1rem;
+        padding: 12px 20px;
+        margin-top: 10px;
+        background-color: #ff6600;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .course-btn:hover {
+        background-color: #ff4d00;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .underline-text {
+        font-size: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     #china-study {
         padding: 30px 15px;
@@ -177,8 +294,8 @@
         text-align: center;
     }
     .course-content {
-        flex-direction: column; /* Переводим элементы в колонку на мобильных */
-        align-items: center; /* Центрируем элементы, если нужно */
+        flex-direction: column;
+        align-items: center;
     }
 
     .course-image-wrapper {
@@ -263,30 +380,10 @@
         background-color: #ff4d00;
     }
     h2 {
-        font-size: 1.5rem; /* Уменьшаем размер шрифта */
+        font-size: 1.5rem;
     }
 
     .underline-text {
-        font-size: 1.5rem; /* Можно также задать размер для span */
+        font-size: 1.5rem;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

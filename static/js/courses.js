@@ -12,8 +12,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // Вызываем сразу для анимации на загрузке страницы
+    revealOnScroll();
 });
-
-
-

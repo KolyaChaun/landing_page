@@ -17,7 +17,7 @@
 
 .benefits h2 span {
     display: inline-block;
-    border-bottom: 3px solid #ff6600; /* Подчеркивание в общем стиле */
+    border-bottom: 3px solid #ff6600;
     padding-bottom: 10px;
 }
 
@@ -32,7 +32,7 @@
     font-size: 20px;
     color: #333;
     line-height: 1.6;
-    width: 48%; /* Устанавливаем ширину для списка */
+    width: 48%;
 }
 
 .benefit-list-left li, .benefit-list-right li {
@@ -44,10 +44,9 @@
 .checkmark {
     color: #ff6600;
     font-size: 24px;
-    margin-right: 10px; /* Отступ между галочкой и текстом */
+    margin-right: 10px;
 }
 
-/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .benefits {
         padding: 40px 20px;
@@ -59,20 +58,19 @@
     }
 
     .benefits-wrapper {
-        display: block; /* Все элементы по очереди */
+        display: block;
     }
 
     .benefit-list-left, .benefit-list-right {
-        width: 100%; /* Списки занимают всю ширину */
-        font-size: 18px; /* Уменьшаем размер шрифта */
+        width: 100%;
+        font-size: 18px;
     }
 
     .benefit-list-left li, .benefit-list-right li {
-        margin-bottom: 12px; /* Уменьшаем промежутки между элементами списка */
+        margin-bottom: 12px;
     }
 
     .checkmark {
-        font-size: 20px; /* Уменьшаем размер галочки */
+        font-size: 20px;
     }
 }
-

@@ -1,4 +1,3 @@
-// Функция для проверки, что элемент находится в видимой части экрана
 function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
     return (
@@ -9,18 +8,15 @@ function isElementInViewport(el) {
     );
 }
 
-// Функция для добавления класса visible, если элемент в пределах экрана
 function handleScroll() {
-    const items = document.querySelectorAll('.cta-item'); // Все элементы с классом .cta-item
+    const items = document.querySelectorAll('.cta-item');
     items.forEach(item => {
         if (isElementInViewport(item)) {
-            item.classList.add('visible'); // Добавляем класс visible, если элемент в пределах экрана
+            item.classList.add('visible');
         }
     });
 }
 
-// Запускаем обработчик при прокрутке страницы
 window.addEventListener('scroll', handleScroll);
 
-// Также проверим на старте, если элементы уже видны (например, если они вверху страницы)
 handleScroll();

@@ -1,0 +1,7 @@
+footer {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    color: #333;
+    box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.1);
+}

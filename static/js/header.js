@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const consultationBtn = document.querySelector('.consultation-btn');
     const socialIcons = document.querySelectorAll('.social-icons a');
 
-    // Функция плавной прокрутки с небольшим отступом сверху
     function scrollToElement(targetId) {
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Обработчик для кнопки "Отримати консультацію"
     consultationBtn?.addEventListener('click', function (e) {
         e.preventDefault();
         if (window.location.pathname === '/taobao' || window.location.pathname === '/pinduoduo') {
@@ -28,13 +26,11 @@ document.addEventListener('DOMContentLoaded', function () {
         hamburger?.classList.remove('active');
     });
 
-    // Открытие/закрытие меню при клике на бургер
     hamburger?.addEventListener('click', () => {
         navLinks?.classList.toggle('active');
         hamburger.classList.toggle('active');
     });
 
-    // Прокрутка при клике на навигационные ссылки на главной странице
     if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
         navItems.forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -46,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Закрытие меню при клике на иконки соцсетей
     socialIcons.forEach(icon => {
         icon.addEventListener('click', () => {
             navLinks?.classList.remove('active');
@@ -54,8 +49,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
-
-
-
-

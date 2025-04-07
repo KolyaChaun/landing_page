@@ -8,8 +8,8 @@
     <link rel="icon" href="{{ url_for('static', path='images/favicon.ico') }}" type="image/x-icon">
 
     <link rel="stylesheet" href="{{ url_for('static', path='css/base.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', path='css/header.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', path='css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/common/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/common/footer.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="{{ url_for('static', path='css/pinduoduo/included_in_course.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', path='css/pinduoduo/price_comparison.css') }}">
@@ -25,7 +25,7 @@
     <main>
         <section class="image-and-content">
             <div class="image-container">
-                <img src="{{ url_for('static', path='images/course-pinduoduo.png') }}" alt="Курс по Pinduoduo">
+                <img src="{{ url_for('static', path='images/pinduoduo/course-pinduoduo.png') }}" alt="Курс по Pinduoduo">
                 <a href="javascript:void(0);" class="signup-button-on-image" onclick="showPopup()">Записатися</a>
             </div>
 
@@ -45,7 +45,7 @@
             </div>
         </section>
         <div class="full-width-image">
-            <img src="{{ url_for('static', path='images/price-comparison-pinduoduo.png') }}" alt="Taobao Bottom Image">
+            <img src="{{ url_for('static', path='images/pinduoduo/price-comparison-pinduoduo.png') }}" alt="Taobao Bottom Image">
         </div>
         <div class="course-program">
             <div class="container">

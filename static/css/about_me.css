@@ -1,4 +1,3 @@
-/* Сброс стилей */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +10,6 @@ body {
     color: #333;
 }
 
-/* Секция обо мне */
 .about-me {
     padding: 60px 0;
     background-color: #fff;
@@ -20,14 +18,12 @@ body {
     margin-top: -70px;
 }
 
-/* Общий контейнер */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Секция с текстом и фото */
 .about-wrapper {
     display: flex;
     justify-content: space-between;
@@ -36,7 +32,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* Текстовая часть */
 .about-text {
     max-width: 60%;
     line-height: 1.8;
@@ -67,7 +62,6 @@ body {
     text-align: justify;
 }
 
-/* Фото профиля */
 .about-image {
     max-width: 35%;
     text-align: center;
@@ -78,7 +72,7 @@ body {
 }
 
 .about-image:hover {
-    transform: scale(1.05); /* Легкое увеличение изображения при наведении */
+    transform: scale(1.05);
 }
 
 .profile-photo {
@@ -91,7 +85,6 @@ body {
     object-position: right 10px top -25px;
 }
 
-/* Секция с плюшками */
 .cta-section {
     text-align: center;
     margin-top: 60px;
@@ -105,7 +98,6 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Стилизация списка плюшек */
 .cta-section ul {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -138,7 +130,6 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Нумерация в плюсах */
 .cta-section ul li::before {
     content: attr(data-num);
     position: absolute;
@@ -157,23 +148,20 @@ body {
     border: 3px solid #fff;
 }
 
-/* Анимация для плюсов */
 .cta-item {
     opacity: 0;
-    transform: translateY(60px); /* Элемент начинается ниже */
+    transform: translateY(60px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Когда элемент становится видимым, добавляем класс */
 .cta-item.visible {
     opacity: 1;
-    transform: translateY(0); /* Элемент поднимается наверх */
+    transform: translateY(0);
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .about-text h2 {
-        font-size: 2rem; /* Уменьшаем размер шрифта для мобильных устройств */
+        font-size: 2rem;
     }
 
     .about-wrapper {
