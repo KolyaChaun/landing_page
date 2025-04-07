@@ -1,0 +1,24 @@
+<div id="popup" class="popup">
+    <div class="popup-content" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <h2>Записатися на курс</h2>
+        <form id="application-form">
+            <input type="text" id="name" name="name" placeholder="Ваше ім'я" required>
+            <input type="tel" id="phone" name="phone" placeholder="Ваш номер телефону" required>
+            <input type="submit" value="Відправити">
+        </form>
+    </div>
+</div>
+
+<div id="confirmation-popup" class="popup">
+    <div class="popup-content">
+        <button class="close-btn" onclick="closePopup()">×</button>
+
+        <h2>Дякуємо за вашу заявку!</h2>
+        <p>Ваша заявка успішно надіслана.</p>
+        <!-- Кнопка для закрытия попапа с подтверждением -->
+        <button class="close-confirmation-btn">Закрити</button>
+    </div>
+</div>
+
+

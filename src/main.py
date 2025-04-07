@@ -25,6 +25,12 @@ def send_message_to_telegram(name: str, phone: str):
     response = requests.post(url, data=payload)
     return response
 
+def enrollment_in_a_course_telegram(name: str, phone: str):
+    message = f"Запис на курс Taobao:\nІм'я: {name}\nТелефон: {phone}"
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+    payload = {"chat_id": CHAT_ID, "text": message}
+    response = requests.post(url, data=payload)
+    return response
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
@@ -60,6 +66,13 @@ def pinduoduo_program(request: Request):
 async def submit_form(name: str = Form(...), phone: str = Form(...)):
     if name and phone:
         send_message_to_telegram(name, phone)
+        return JSONResponse(content={"success": True})
+    return JSONResponse(content={"success": False})
+
+@app.post("/sign_up_form_taobao")
+async def sign_up_form_taobao(name: str = Form(...), phone: str = Form(...)):
+    if name and phone:
+        enrollment_in_a_course_telegram(name, phone)
         return JSONResponse(content={"success": True})
     return JSONResponse(content={"success": False})
 

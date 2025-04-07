@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ url_for('static', path='css/taobao/price_comparison.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', path='css/taobao/course_program.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', path='css/taobao/price.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/taobao/sign_up_form.css') }}">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
         <section class="image-and-content">
             <div class="image-container">
                 <img src="{{ url_for('static', path='images/course-taobao.png') }}" alt="Курс по Taobao">
-                <a href="#form" class="signup-button-on-image">Записатися</a>
+                <a href="javascript:void(0);" class="signup-button-on-image" onclick="showPopup()">Записатися</a>
             </div>
 
             <div class="what-is-included">
@@ -84,10 +85,10 @@
             <div class="price-container">
                 <span class="price">Ціна: 950 грн</span>
             </div>
-            <a href="#form" class="signup-button">Записатися</a>
+            <a href="javascript:void(0);" class="signup-button" onclick="showPopup()">Записатися</a>
         </div>
     </div>
-
+        {% include 'partials/sign_up_form.html' %}
     </main>
 
     {% include 'partials/footer.html' %}
@@ -95,6 +96,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="{{ url_for('static', path='js/header.js') }}"></script>
     <script src="{{ url_for('static', path='js/taobao/course_program.js') }}"></script>
+    <script src="{{ url_for('static', path='js/taobao/sign_up_form.js') }}"></script>
 
 </body>
 
