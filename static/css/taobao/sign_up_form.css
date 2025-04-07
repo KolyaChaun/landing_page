@@ -1,4 +1,3 @@
-/* Стиль для попапа */
 .popup {
     display: none;
     position: fixed;
@@ -14,7 +13,6 @@
     transition: opacity 0.3s ease;
 }
 
-/* Контейнер для контента попапа */
 .popup-content {
     background-color: #fff;
     padding: 30px;
@@ -27,12 +25,10 @@
     transform: scale(0.9);
 }
 
-/* Показываем контент с анимацией */
 .popup-content.show {
     transform: scale(1);
 }
 
-/* Стиль заголовка попапа */
 .popup h2 {
     font-size: 24px;
     color: #333;
@@ -42,7 +38,7 @@
     border-bottom: 3px solid #ff6600; /* подчёркивание цветом кнопки */
     padding-bottom: 5px;
 }
-/* Стиль для всех полей формы */
+
 .popup input[type="text"],
 .popup input[type="tel"],
 .popup input[type="submit"] {
@@ -56,14 +52,12 @@
     transition: border-color 0.3s ease;
 }
 
-/* Изменение цвета рамки при фокусе */
 .popup input[type="text"]:focus,
 .popup input[type="tel"]:focus {
     border-color: #ff6600;
     outline: none;
 }
 
-/* Стиль для кнопки отправки формы */
 .popup input[type="submit"] {
     background-color: #ff6600;
     color: white;
@@ -77,7 +71,6 @@
     background-color: #ff6600;
 }
 
-/* Стиль для крестика закрытия попапа */
 .popup .close-btn {
     position: absolute;
     top: 10px;
@@ -90,29 +83,24 @@
     transition: color 0.3s ease;
 }
 
-/* Изменение цвета крестика при наведении */
 .popup .close-btn:hover {
     color: #ff6600;
 }
 
-/* Анимация для показа попапа */
 .popup.show {
     display: flex;
     opacity: 1;
 }
 
-/* Анимация для скрытия попапа */
 .popup.hide {
     opacity: 0;
     pointer-events: none;
 }
 
-/* Дополнительные стили для фокуса на инпут */
 .popup input[type="text"]:focus, .popup input[type="tel"]:focus {
     border-color: #ff6600;
 }
 
-/* Стиль крестика */
 .popup .close-btn {
     position: absolute;
     top: 15px;
@@ -126,12 +114,10 @@
     transition: color 0.3s ease;
 }
 
-/* При наведении на крестик */
 .popup .close-btn:hover {
     color: #ff6600;
 }
 
-/* Стиль для кнопки закрытия попапа с подтверждением */
 .popup .close-confirmation-btn {
     background-color: #ff6600;
     color: white;
@@ -144,7 +130,15 @@
     transition: background-color 0.3s ease;
 }
 
-/* Изменение фона кнопки при наведении */
 .popup .close-confirmation-btn:hover {
     background-color: #e65c00;
+}
+.error-message {
+    color: red;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+input.invalid {
+    border-color: red;
 }

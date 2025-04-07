@@ -1,45 +1,63 @@
-// Открытие попапа
 function showPopup() {
     const popup = document.getElementById('popup');
     popup.classList.add('show');
     popup.classList.remove('hide');
 }
 
-// Закрытие попапа
 function closePopup() {
-    // Закрытие попапов с анимацией
     const popup = document.getElementById('popup');
     const confirmationPopup = document.getElementById('confirmation-popup');
 
     popup.classList.add('hide');
-    // confirmationPopup.classList.add('hide');
-
     setTimeout(function() {
         popup.classList.remove('show');
         confirmationPopup.classList.remove('show');
-    }, 300); // задержка для анимации скрытия
+    }, 300);
 }
 
-// Показываем попап с подтверждением
 function showConfirmationPopup() {
-    // Закрываем попап с формой и показываем попап с подтверждением
     const popup = document.getElementById('popup');
     const confirmationPopup = document.getElementById('confirmation-popup');
 
     popup.classList.add('hide');
     popup.classList.remove('show');
     confirmationPopup.classList.add('show');
-    // confirmationPopup.classList.remove('hide');
 }
 
-// Отправка формы
 document.getElementById('application-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    var name = document.getElementById('name').value;
-    var phone = document.getElementById('phone').value;
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
+    const nameError = document.getElementById('name-error');
+    const phoneError = document.getElementById('phone-error');
 
-    var formData = new FormData();
+    const name = nameInput.value.trim();
+    const phone = phoneInput.value.trim();
+    const phoneRegex = /^(?:\+380\d{9}|0\d{9})$/;
+
+    let isValid = true;
+
+    nameError.textContent = '';
+    phoneError.textContent = '';
+    nameInput.classList.remove('invalid');
+    phoneInput.classList.remove('invalid');
+
+    if (name.length < 3) {
+        nameError.textContent = "Ім'я має містити щонайменше 3 літери.";
+        nameInput.classList.add('invalid');
+        isValid = false;
+    }
+    if (!phoneRegex.test(phone)) {
+        phoneError.textContent = "Номер має бути у форматі +380XXXXXXXXX або 0XXXXXXXXX.";
+        phoneInput.classList.add('invalid');
+        isValid = false;
+    }
+    if (!isValid) {
+        return;
+    }
+
+    const formData = new FormData();
     formData.append('name', name);
     formData.append('phone', phone);
 
@@ -49,15 +67,14 @@ document.getElementById('application-form').addEventListener('submit', function(
     })
     .then(response => response.text())
     .then(data => {
-        showConfirmationPopup();  // Вызов функции, а не ручное изменение display
+        showConfirmationPopup();
         document.getElementById("application-form").reset();
     })
-    .catch(error => alert("Виникла помилка. Спробуйте пізніше."));
+    .catch(error => {
+        phoneError.textContent = "Виникла помилка. Спробуйте пізніше.";
+    });
 });
 
-// Обработчик для кнопки "Закрити"
 document.querySelector('.close-confirmation-btn').addEventListener('click', function() {
     closePopup();
 });
-
-
