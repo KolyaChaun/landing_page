@@ -94,7 +94,7 @@
 }
 @media (max-width: 1100px) {
     .image-container img {
-        content: url('/src/staticatic/images/pinduoduo/course-pinduoduo.png');
+        content: url('/static/images/pinduoduo/course-pinduoduo.png');
         margin-top: 0;
     }
 
@@ -110,7 +110,7 @@
 
 @media (max-width: 800px) {
     .image-container img {
-        content: url('/src/staticatic/images/pinduoduo/course-pinduoduo-mobile.png');
+        content: url('/static/images/pinduoduo/course-pinduoduo-mobile.png');
         margin-top: 0;
     }
 
@@ -163,7 +163,7 @@
 
 @media (max-width: 430px) {
     .image-container img {
-        content: url('/src/staticatic/images/pinduoduo/course-pinduoduo-mobile.png');
+        content: url('/static/images/pinduoduo/course-pinduoduo-mobile.png');
         margin-top: 0;
     }
 
@@ -179,7 +179,7 @@
 
 @media (max-width: 400px) {
     .image-container img {
-        content: url('/src/staticatic/images/pinduoduo/course-pinduoduo-mobile.png');
+        content: url('/static/images/pinduoduo/course-pinduoduo-mobile.png');
         margin-top: -5px;
     }
     .signup-button-on-image {
@@ -193,7 +193,7 @@
 
 @media (max-width: 375px) {
     .image-container img {
-        content: url('/src/staticatic/images/pinduoduo/course-pinduoduo-mobile.png');
+        content: url('/static/images/pinduoduo/course-pinduoduo-mobile.png');
         margin-top: -5px;
     }
 
@@ -208,7 +208,7 @@
 
 @media (max-width: 360px) {
     .image-container img {
-        content: url('/src/staticatic/images/pinduoduo/course-pinduoduo-mobile.png');
+        content: url('/static/images/pinduoduo/course-pinduoduo-mobile.png');
         margin-top: -5px;
     }
 

@@ -8,7 +8,7 @@
 
 @media (max-width: 768px) {
     .full-width-image img {
-        content: url('/src/staticatic/images/pinduoduo/price-comparison-pinduoduo-mobile.png');
+        content: url('/static/images/pinduoduo/price-comparison-pinduoduo-mobile.png');
         margin: -20px 0 0 0;
     }
 }
