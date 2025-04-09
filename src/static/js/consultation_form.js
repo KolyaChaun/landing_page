@@ -19,7 +19,7 @@ document.getElementById("application-form").addEventListener("submit", function(
     formData.append("name", name);
     formData.append("phone", phone);
 
-    fetch("/submit_form", {
+    fetch("/consultation_form", {
         method: "POST",
         body: formData
     })

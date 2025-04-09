@@ -21,10 +21,10 @@
 
 .signup-button-on-image {
     position: absolute;
-    bottom: 60px;
-    left: 48.6%;
+    bottom: 75px;
+    left: 49%;
     transform: translateX(-50%);
-    background-color: #ff6600;
+    background-color: #c72432;
     color: white;
     font-size: 25px;
     padding: 16px 36px;
@@ -36,7 +36,7 @@
 }
 
 .signup-button-on-image:hover {
-    background-color: #e05500;
+    background-color: #a8210d;
 }
 
 .what-is-included {
@@ -60,7 +60,7 @@
 
 .what-is-included h2 span {
     display: inline-block;
-    border-bottom: 3px solid #ff6600;
+    border-bottom: 3px solid #c72432;
     padding-bottom: 10px;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .checkmark {
-    color: #ff6600;
+    color: #c72432;
     font-size: 20px;
     margin-right: 10px;
 }
@@ -92,18 +92,17 @@
     margin: 0;
     padding: 0;
 }
-
 @media (max-width: 1100px) {
     .image-container img {
-        content: url('/static/images/taobao/course-taobao.png');
+        content: url('/src/staticatic/images/pinduoduo/course-pinduoduo.png');
         margin-top: 0;
     }
 
     .signup-button-on-image {
-        font-size: 14px;
+        font-size: 12px;
         padding: 10px 28px;
-        bottom: 40px;
-        left: 48.5%;
+        bottom: 45px;
+        left: 49%;
         transform: translateX(-50%);
     }
 
@@ -111,15 +110,15 @@
 
 @media (max-width: 800px) {
     .image-container img {
-        content: url('/static/images/taobao/course-taobao-mobile.png');
+        content: url('/src/staticatic/images/pinduoduo/course-pinduoduo-mobile.png');
         margin-top: 0;
     }
 
     .signup-button-on-image {
         font-size: 27px;
         padding: 10px 28px;
-        bottom: 70px;
-        left: 49%;
+        bottom: 105px;
+        left: 48%;
         transform: translateX(-50%);
     }
 
@@ -164,15 +163,15 @@
 
 @media (max-width: 430px) {
     .image-container img {
-        content: url('/static/images/taobao/course-taobao-mobile.png');
+        content: url('/src/staticatic/images/pinduoduo/course-pinduoduo-mobile.png');
         margin-top: 0;
     }
 
     .signup-button-on-image {
         font-size: 11px;
         padding: 10px 28px;
-        bottom: 35px;
-        left: 49%;
+        bottom: 55px;
+        left: 48%;
         transform: translateX(-50%);
     }
 
@@ -180,44 +179,44 @@
 
 @media (max-width: 400px) {
     .image-container img {
-        content: url('/static/images/taobao/course-taobao-mobile.png');
+        content: url('/src/staticatic/images/pinduoduo/course-pinduoduo-mobile.png');
         margin-top: -5px;
     }
     .signup-button-on-image {
         font-size: 10px;
         padding: 10px 28px;
-        bottom: 32px;
-        left: 47.4%;
+        bottom: 48px;
+        left: 47.2%;
         transform: translateX(-45%);
     }
 }
 
 @media (max-width: 375px) {
     .image-container img {
-        content: url('/static/images/taobao/course-taobao-mobile.png');
+        content: url('/src/staticatic/images/pinduoduo/course-pinduoduo-mobile.png');
         margin-top: -5px;
     }
 
     .signup-button-on-image {
         font-size: 11px;
-        padding: 7px 20px;
-        bottom: 35px;
-        left: 47.5%;
+        padding: 7px 18px;
+        bottom: 49px;
+        left: 46.5%;
         transform: translateX(-45%);
     }
 }
 
 @media (max-width: 360px) {
     .image-container img {
-        content: url('/static/images/taobao/course-taobao-mobile.png');
+        content: url('/src/staticatic/images/pinduoduo/course-pinduoduo-mobile.png');
         margin-top: -5px;
     }
 
     .signup-button-on-image {
-        font-size: 10px;
+        font-size: 9px;
         padding: 7px 18px;
-        bottom: 28px;
-        left: 47.5%;
+        bottom: 42px;
+        left: 46.5%;
         transform: translateX(-45%);
     }
 }
