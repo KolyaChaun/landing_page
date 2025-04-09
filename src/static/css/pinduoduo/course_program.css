@@ -70,14 +70,14 @@
 }
 
 .right-column {
-    counter-reset: right-counter 5;
+    counter-reset: right-counter 7;
 }
 
 .right-column li {
     position: relative;
     padding-left: 35px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 19px;
+    padding-bottom: 19px;
 }
 
 .right-column li::before {
@@ -172,6 +172,21 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+@media (max-width: 1100px) {
+    .right-column {
+        counter-reset: right-counter 7;
+        margin-top: -5px;
+    }
+
+    .right-column li {
+        position: relative;
+        padding-left: 35px;
+        padding-top: 17px;
+        padding-bottom: 17px;
+    }
+}
+
 @media (max-width: 768px) {
     .course-program h2 {
         font-size: 1.5rem;
@@ -188,7 +203,6 @@
         flex-direction: column;
         gap: 5px;
     }
-
     .column {
         width: 100%;
     }

@@ -35,7 +35,7 @@
     margin-bottom: 20px;
     font-family: 'Arial', sans-serif;
     display: inline-block;
-    border-bottom: 3px solid #ff6600; /* подчёркивание цветом кнопки */
+    border-bottom: 3px solid #ff6600;
     padding-bottom: 5px;
 }
 

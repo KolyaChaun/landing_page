@@ -59,7 +59,7 @@
                                 <img src="static/images/tao-course1.jpg" alt="Course 1" class="course-image">
                             </div>
                             <div class="course-description">
-                                <p>Детальне пояснення, як обирати продавців з якісним товаром, уникати недобросовісних магазинів та правильно підбирати розмір для вдалих покупок.</p>
+                                <p>Детальне пояснення, як обирати продавців з якісним товаром, уникати сумнівних магазинів та правильно підбирати розмір для вдалих покупок.</p>
                             </div>
                         </div>
                         <div class="course-price-container">
@@ -99,14 +99,16 @@
         <section id="consultation">
             <h2>Отримати консультацію</h2>
             <div class="form-container">
-                <form id="application-form" action="/submit_form" method="post">
+                <form id="application-form" action="/consultation_form" method="post" novalidate>
                     <div class="input-group">
                         <label for="name">Ім'я</label>
                         <input type="text" id="name" name="name" placeholder="Введіть ім'я" required>
+                        <div id="name-error" class="error-message"></div>
                     </div>
                     <div class="input-group">
                         <label for="phone">Номер телефону</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+380 (__) ___-__-__" required>
+                        <input type="tel" id="phone" name="phone">
+                        <div id="phone-error" class="error-message"></div>
                     </div>
                     <button type="submit">Відправити</button>
                 </form>
@@ -129,7 +131,7 @@
                             Вже 4 роки купую напряму з китайських платформ, знаходжу найвигідніші товари та допомагаю іншим економити.
                         </p>
                         <p>
-                            Я знаю, як вибирати надійних продавців, замовляти без посередників і отримувати товари за найкращими цінами. Допоможу тобі уникнути помилок, знайти якісний товар та оформити покупку без зайвих переплат.
+                            Я знаю, як обирати надійних продавців, замовляти без посередників і отримувати товари за найкращими цінами. Допоможу тобі уникнути помилок, знайти якісний товар та оформити покупку без зайвих переплат.
                         </p>
                         <p>
                             Моя мета — зробити шопінг у Китаї простим, вигідним і доступним для всіх. Разом знайдемо найкращі пропозиції!
@@ -200,7 +202,7 @@
     <script src="{{ url_for('static', path='js/header.js') }}"></script>
     <script src="{{ url_for('static', path='js/courses.js') }}"></script>
     <script src="{{ url_for('static', path='js/consultation_form.js') }}"></script>
-    <script src="{{ url_for('static', path='js/about.js') }}"></script>
+    <script src="{{ url_for('static', path='js/about_me.js') }}"></script>
     <script src="{{ url_for('static', path='js/reviews.js') }}"></script>
 
 </body>

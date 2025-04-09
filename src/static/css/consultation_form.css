@@ -181,6 +181,15 @@
     background-color: #e65c00;
     transform: scale(1.05);
 }
+.error-message {
+    color: red;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+input.invalid {
+    border-color: red;
+}
 
 @media (max-width: 768px) {
     #consultation {

@@ -17,8 +17,8 @@ async def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 
-@router.get("/about", name="about")
-def about(request: Request):
+@router.get("/about_me", name="about_me")
+def about_me(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 
