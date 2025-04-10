@@ -16,7 +16,7 @@ Welcome to the **Landing Page Project**! This project is a fully responsive land
 - **Telegram Bot**: Used to send form submissions directly to a Telegram chat for easy access and notifications.
 
 ### 🌐 **Visit the Website**
-You can view the website at [https://chinabykat.pp.ua/](https://chinabykat.pp.ua/).
+You can view the website at [https://chinabykat.pp.ua](https://chinabykat.pp.ua)
 
 ### 📸 **Screenshots**
 
