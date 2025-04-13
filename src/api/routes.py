@@ -15,7 +15,7 @@ router = APIRouter()
 templates = Jinja2Templates(directory="src/templates")
 
 BASE_DIR = Path(__file__).resolve().parent
-STATIC_DIR = BASE_DIR.parent / "static"
+static_dir = "/home/ubuntu/landing_page/src/static"
 
 
 # GET
@@ -84,10 +84,8 @@ async def sign_up_form_pinduoduo(name: str = Form(...), phone: str = Form(...)):
 
 @router.get("/sitemap.xml", include_in_schema=False)
 def sitemap_xml():
-    sitemap_path = STATIC_DIR / "seo" / "sitemap.xml"
-    print(f"Looking for sitemap at: {sitemap_path}")  # Это выведет путь в лог
-    if sitemap_path.exists():
-        return FileResponse(sitemap_path, media_type="application/xml")
-    else:
-        return JSONResponse({"error": "sitemap.xml not found"}, status_code=404)
+    return FileResponse(
+        os.path.join(static_dir, "seo", "sitemap.xml"), media_type="application/xml"
+    )
+
 
