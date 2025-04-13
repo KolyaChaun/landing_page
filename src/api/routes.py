@@ -1,3 +1,5 @@
+import os
+
 from fastapi import APIRouter, Form, Request
 from starlette.responses import HTMLResponse, JSONResponse
 from src.services.telegram import (
@@ -6,9 +8,14 @@ from src.services.telegram import (
     enrollment_in_a_course_pinduoduo,
 )
 from fastapi.templating import Jinja2Templates
+from fastapi.responses import FileResponse
+from pathlib import Path
 
 router = APIRouter()
 templates = Jinja2Templates(directory="src/templates")
+
+BASE_DIR = Path(__file__).resolve().parent
+static_dir = os.path.join(BASE_DIR, "../static")
 
 
 # GET
@@ -65,3 +72,18 @@ async def sign_up_form_pinduoduo(name: str = Form(...), phone: str = Form(...)):
         enrollment_in_a_course_pinduoduo(name, phone)
         return JSONResponse(content={"success": True})
     return JSONResponse(content={"success": False})
+
+
+# SEO
+@router.get("/robots.txt", include_in_schema=False)
+def robots_txt():
+    return FileResponse(
+        os.path.join(static_dir, "seo", "robots.txt"), media_type="text/plain"
+    )
+
+
+@router.get("/sitemap.xml", include_in_schema=False)
+def sitemap_xml():
+    return FileResponse(
+        os.path.join(static_dir, "seo", "sitemap.xml"), media_type="application/xml"
+    )
