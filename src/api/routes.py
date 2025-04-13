@@ -15,7 +15,7 @@ router = APIRouter()
 templates = Jinja2Templates(directory="src/templates")
 
 BASE_DIR = Path(__file__).resolve().parent
-static_dir = os.path.join(BASE_DIR, "../static")
+static_dir = os.path.join(BASE_DIR, "src", "static")
 
 
 # GET
