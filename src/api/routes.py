@@ -72,8 +72,7 @@ async def sign_up_form_pinduoduo(name: str = Form(...), phone: str = Form(...)):
 @router.get("/robots.txt", include_in_schema=False)
 async def robots_txt():
     return FileResponse(
-        "/home/ubuntu/landing_page/src/static/seo/robots.txt",
-        media_type="text/plain"
+        "/home/ubuntu/landing_page/src/static/seo/robots.txt", media_type="text/plain"
     )
 
 
@@ -81,7 +80,5 @@ async def robots_txt():
 def sitemap_xml():
     return FileResponse(
         "/home/ubuntu/landing_page/src/static/seo/sitemap.xml",
-        media_type="application/xml"
+        media_type="application/xml",
     )
-
-
