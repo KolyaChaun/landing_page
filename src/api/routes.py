@@ -15,7 +15,7 @@ router = APIRouter()
 templates = Jinja2Templates(directory="src/templates")
 
 BASE_DIR = Path(__file__).resolve().parent
-static_dir = os.path.join(BASE_DIR, "/static")
+STATIC_DIR = BASE_DIR.parent / "static"
 
 
 # GET
@@ -75,15 +75,21 @@ async def sign_up_form_pinduoduo(name: str = Form(...), phone: str = Form(...)):
 
 
 # SEO
-@router.get("/robots.txt", include_in_schema=False)
-def robots_txt():
-    return FileResponse(
-        os.path.join(static_dir, "seo", "robots.txt"), media_type="text/plain"
-    )
+# @router.get("/robots.txt", include_in_schema=False)
+# def robots_txt():
+#     return FileResponse(
+#         os.path.join(static_dir, "seo", "robots.txt"), media_type="text/plain"
+#     )
 
 
 @router.get("/sitemap.xml", include_in_schema=False)
 def sitemap_xml():
-    return FileResponse(
-        os.path.join(static_dir, "seo", "sitemap.xml"), media_type="application/xml"
-    )
+    # Путь к файлу sitemap.xml в директории static/seo
+    sitemap_path = STATIC_DIR / "seo" / "sitemap.xml"
+    if sitemap_path.exists():
+        return FileResponse(sitemap_path, media_type="application/xml")
+    else:
+        return FileResponse(
+            Path(__file__).resolve().parent / "notfound.xml",
+            media_type="application/xml"
+        )
