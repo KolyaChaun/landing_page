@@ -84,12 +84,10 @@ async def sign_up_form_pinduoduo(name: str = Form(...), phone: str = Form(...)):
 
 @router.get("/sitemap.xml", include_in_schema=False)
 def sitemap_xml():
-    # Путь к файлу sitemap.xml в директории static/seo
     sitemap_path = STATIC_DIR / "seo" / "sitemap.xml"
+    print(f"Looking for sitemap at: {sitemap_path}")  # Это выведет путь в лог
     if sitemap_path.exists():
         return FileResponse(sitemap_path, media_type="application/xml")
     else:
-        return FileResponse(
-            Path(__file__).resolve().parent / "notfound.xml",
-            media_type="application/xml"
-        )
+        return JSONResponse({"error": "sitemap.xml not found"}, status_code=404)
+
