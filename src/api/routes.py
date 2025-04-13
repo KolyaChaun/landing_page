@@ -1,5 +1,3 @@
-import os
-
 from fastapi import APIRouter, Form, Request
 from starlette.responses import HTMLResponse, JSONResponse
 from src.services.telegram import (
@@ -9,13 +7,9 @@ from src.services.telegram import (
 )
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import FileResponse
-from pathlib import Path
 
 router = APIRouter()
 templates = Jinja2Templates(directory="src/templates")
-
-BASE_DIR = Path(__file__).resolve().parent
-static_dir = "/home/ubuntu/landing_page/src/static"
 
 
 # GET
@@ -75,11 +69,12 @@ async def sign_up_form_pinduoduo(name: str = Form(...), phone: str = Form(...)):
 
 
 # SEO
-# @router.get("/robots.txt", include_in_schema=False)
-# def robots_txt():
-#     return FileResponse(
-#         os.path.join(static_dir, "seo", "robots.txt"), media_type="text/plain"
-#     )
+@router.get("/robots.txt", include_in_schema=False)
+async def robots_txt():
+    return FileResponse(
+        "/home/ubuntu/landing_page/src/static/seo/robots.txt",
+        media_type="text/plain"
+    )
 
 
 @router.get("/sitemap.xml", include_in_schema=False)
