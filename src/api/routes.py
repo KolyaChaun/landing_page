@@ -85,7 +85,8 @@ async def sign_up_form_pinduoduo(name: str = Form(...), phone: str = Form(...)):
 @router.get("/sitemap.xml", include_in_schema=False)
 def sitemap_xml():
     return FileResponse(
-        os.path.join(static_dir, "seo", "sitemap.xml"), media_type="application/xml"
+        "/home/ubuntu/landing_page/src/static/seo/sitemap.xml",
+        media_type="application/xml"
     )
 
 
